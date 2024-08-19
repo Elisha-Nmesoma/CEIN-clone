@@ -1,5 +1,3 @@
-import { title } from "faker/lib/locales/en_IND"
-import id from "faker/lib/locales/id_ID"
 
 export const footerData = [
     {
@@ -75,23 +73,3 @@ export const footerData = [
         ]
     }
 ]
-
-
-
-// const user = [
-//     id,name, email,img,isadmin
-// ]
-// const category =[
-//     id,title,desc,img,slug,color
-// ]
-// const product = [
-//     id, title,desc,img,price,isfeatured,options[sizes,colors,],catslug
-// ]
-// const order = [
-//     id,price, price,status,products[],userEmail,stripled
-// ]
-
-
-
-// Public-facing name for project
-// project-552176541910
