@@ -1,4 +1,3 @@
-import { title } from "faker/lib/locales/az"
 
 export const heroData = [
     {
