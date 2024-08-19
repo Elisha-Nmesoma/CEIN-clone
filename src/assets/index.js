@@ -8,6 +8,13 @@ import HamberMenu from "./navIcon.png"
 import close from "./close.png"
 import addCart from "./add.png"
 import dropdown from './dropdown.png'
+import show from "./show.png"
+import hide from "./hide.png"
+import animation from './animation.json'
+import google from "./google.png"
+import next from "./right-arrow.png"
+import back from "./back-arrow.png"
+
 export {
     logo ,
     footerLogo,
@@ -19,4 +26,10 @@ export {
     close,
     addCart,
     dropdown,
+    show,
+    hide,
+    animation,
+    google,
+    next,
+    back,
 }

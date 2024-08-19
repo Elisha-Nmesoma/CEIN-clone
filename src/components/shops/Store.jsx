@@ -3,7 +3,7 @@ import { styles } from '../../style'
 
 export default function Stores() {
   return (
-    <div className="px-4 md:px-10">
+    <div className="px-4 md:px-16">
       <div className={styles.flex7}>
         <div className='text-100'>
           <p>CORPORATE</p>
@@ -12,12 +12,12 @@ export default function Stores() {
             <p>Time</p>
           </div>
         </div>
-        <div className='w-full h-[20rem] bg-red-500'>
+        <div className='w-full h-[20rem] md:h-[25rem] bg-red-500'>
           <img />
         </div>
 
         <div className='flex justify-center'>
-          <div className='blog-div text-100 md:w-[40rem]'>
+          <div className='blog-div text-200 md:w-[40rem]'>
             <p>CEIN, one of Europe's leading fashion groups, is moving forward in its journey towards sustainability and, for the first time, will use cotton originating from regenerative agriculture in products on sale next year. To achieve this, the company has joined forces with Materra, a British- Indian company which specialises in designing solutions for growing and sourcing future-proof cotton, including regenerative cotton, in order to move towards a fashion industry that is more respectful to the environment and people.</p>
             <p>Thanks to the inclusion of this type of fibre in its collection, CEIN has reached a milestone in its sustainability strategy by using, for the first time, cotton that has been cultivated using sustainable agricultural practices with a positive environmental impact for the region and biodiversity. </p>
             <p>In addition, CEIN will, for the first time, have complete traceability of its cotton value chain, from seed to garment. To achieve this, farmers in India will collect soil and crop data via Materra's digital platform, called Co:Farm, that will provide unprecedent levels of transparency and allow Mango to monitor the evolution of indicators such as fertility, soil health, number of nutrients, use of water, machinery and pesticides, size of the plot used, among others. </p>

@@ -11,16 +11,16 @@ export default function SuggestionPage() {
                     <div className={`${styles.blackText} mt-4`}>
                         <h2 className='text-600'>{item.title}</h2>
 
-                        <div className={`${styles.flexRow} whitespace-nowrap overflow-x-scroll hide-scrollbar`}>
+                        <div className={`${styles.flexRow} overflow-x-scroll h-full hide-scrollbar`}>
                             {item.children.map(child => (
 
-                                <div key={child.id} className='w-full md:w-[18rem]' >
-                                    <div className=' flex-shrink-0 mt-6 mb-2 w-full box-border '>
+                                <div key={child.id} className='w-full md:w-[18rem] flex flex-col justify-start' >
+                                    <div className=' mt-6 mb-2 w-full h-full '>
                                         <img src={child.img} alt={child.productName} className='flex-shrink-0' />
                                     </div>
 
                                     <div className={`${styles.blackText} text-300`}>
-                                        <p>{child.productName}</p>
+                                         <p className='pb-1'>{child.productName}</p> 
                                         <p>${child.price}</p>
                                     </div>
                                 </div>

@@ -2,8 +2,8 @@ import React from 'react'
 import { footerData } from "../components/Database/footerData"
 import { footerLogo } from '../assets';
 import { styles } from "../style"
-import Subscribe from './form/subscribeBtn';
-import EmailInput from './form/inputField';
+import Subscribe from './auth/subscribeBtn';
+import EmailInput from './auth/inputField';
 import ScreenWidth from './functions/screenWidth';
 
 export default function Footer() {

@@ -13,9 +13,10 @@ export const styles = {
     lightBlackText: "text-neutral-600 font-thin text-[.9rem]",
 
     inputFiled: "p-2 text-400 flex w-full rounded-sm bg-transparent border-black border-[.5px] outline-none",
+    authInputFiled: "p-2 text-400 flex w-full rounded-[.2rem] bg-transparent border-black border-[.5px] outline-none",
 
     //logo css
-    bigLogo: "h-3.7 w-[5rem] md:w-[4rem]",
+    bigLogo: " w-[5rem] md:w-[4rem]",
 
     //navigation css
     navIcon: ' h-full flex justify-center',
@@ -62,6 +63,8 @@ export const styles = {
    filterFlex : "flex flex-col gap-5",
 
    //colum flex
+   flex20 : "flex flex-col gap-20",
+   flex10 : "flex flex-col gap-10",
    flex7 : "flex flex-col gap-7",
    flex6 : "flex flex-col gap-6",
    flex5 : "flex flex-col gap-5",
@@ -69,8 +72,14 @@ export const styles = {
    flex3 : "flex flex-col gap-3",
    flex2 : "flex flex-col gap-2",
    flex1 : "flex flex-col gap-1",
+   between:  "flex justify-between items-center ",
+
+
+
 
    spanImg:"w-[1.3rem] float-end ",
 
-   formError:"hidden absolute -top-3.5 text-100 text-red-400"
+   formError:" absolute -top-3.5 text-100 text-red-400",
+    showMore: " text-neutral-600 font-medium",
+    addCart:"w-[.85rem]",
 };

@@ -13,15 +13,14 @@ export default function Hero() {
 
         {heroData.map(item => (
           <div>
-            <div key={item.id} className='w-full h-full'>
+            <div key={item.id} className='w-full h-[calc(100vh-5rem)] relative'>
               <img
                 src={isDesktop? item.imgDesktop : item.imgMobile}
                 alt="collectionBanner"
-                className=' object-cover w-full'
               />
             </div>
-            <div key={item.id} className="px-10 absolute bottom-[10%] -left-2">
-              <h2 className={`${styles.whiteText} text-900 xs:w-36 md:w-52 mb-3  `}>{item.text}</h2>
+            <div key={item.id} className="px-6 md:px-10 absolute bottom-[8%] md:bottom-[15%] -left-2 ">
+              <h2 className={`${styles.whiteText} text-900 w-52 mb-3  `}>{item.text}</h2>
               <div>
                 <ShopNow />
               </div>

@@ -1,19 +1,23 @@
-import React from 'react'
+import React from 'react';
+import App from './App'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom';
-import StateProvider from './components/state/UserState';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css'
 import { ModalProvider } from './components/functions/ModalPopup';
-import App from './App'
+import { Provider } from 'react-redux';
+import store from './components/Authentication/reduxStore'
+import { AuthProvider } from './components/auth/authContex';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <StateProvider>
-        <ModalProvider>
-          <App />
-        </ModalProvider>
-      </StateProvider>
-    </BrowserRouter>
+    <Router>
+      <AuthProvider>
+        <Provider store={store}>
+          <ModalProvider>
+            <App />
+          </ModalProvider>
+        </Provider>
+      </AuthProvider>
+    </Router>
   </React.StrictMode>
 )

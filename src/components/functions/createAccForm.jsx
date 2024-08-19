@@ -1,27 +1,9 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 
 export default function createAccountForm() {
-    const navigate = useNavigate();
 
-    function showPassword() {
-        const passwordField = document.getElementById("password");
-        const confirmPassword = document.getElementById("confirm_password");
-        const togglePassword = document.getElementById("toggle_password");
 
-        if (passwordField.type === "password") {
-            passwordField.type = "text";
-            confirmPassword.type = "text";
-            togglePassword.textContent = "Hide Password";
-        } else {
-            passwordField.type = "password";
-            confirmPassword.type = "password";
-            togglePassword.textContent = "Show Password";
-        }
-    }
-
-    function validatePassword(e) {
-        e.preventDefault();
+    function validateProfile() {
         const username = document.getElementById("username");
         const usernameError = document.getElementById("username_error");
         const passwordField = document.getElementById("password");
@@ -31,6 +13,7 @@ export default function createAccountForm() {
 
         let isValid = true;
 
+        // Username validation
         if (username.value === "") {
             usernameError.classList.remove("hidden");
             usernameError.classList.add("block");
@@ -41,8 +24,9 @@ export default function createAccountForm() {
             usernameError.classList.add("hidden");
             username.classList.remove("border-red-400");
         }
-
-        if (passwordField.value === "" || confirmPassword.value === "") {
+      
+        // Password validation
+        if (passwordField.value === "" && confirmPassword.value === "") {
             passwordError.classList.remove("hidden");
             passwordError.classList.add("block");
             passwordError.textContent = "Fields cannot be empty.";
@@ -58,7 +42,8 @@ export default function createAccountForm() {
             passwordField.classList.remove("border-red-400");
             confirmPassword.classList.remove("border-red-400");
         }
-
+ 
+        // Confirm password validation
         if (passwordField.value !== confirmPassword.value) {
             confirmPasswordError.classList.remove("hidden");
             confirmPasswordError.classList.add("block");
@@ -74,8 +59,10 @@ export default function createAccountForm() {
         }
 
         if (isValid) {
-            navigate('/');
+            // navigate('/');
         }
+
+        return isValid;
     }
 
     function changeUsername() {
@@ -83,6 +70,7 @@ export default function createAccountForm() {
         const usernameError = document.getElementById("username_error");
         usernameError.classList.add("hidden");
         username.classList.remove("border-red-400");
+       
     }
 
     function changePassword() {
@@ -90,6 +78,7 @@ export default function createAccountForm() {
         const passwordError = document.getElementById("password_error");
         passwordError.classList.add("hidden");
         passwordField.classList.remove("border-red-400");
+        console.log( username.value, password.value )
     }
 
     function confirmPassword() {
@@ -100,8 +89,7 @@ export default function createAccountForm() {
     }
 
     return {
-        showPassword,
-        validatePassword,
+        validateProfile,
         changeUsername,
         changePassword,
         confirmPassword,

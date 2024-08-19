@@ -28,3 +28,19 @@ form p a{
   background-color: rgba(17, 24, 39, 0.5);
   z-index: -1;
 }
+
+.authFirst_continer{
+  @apply  h-screen w-full flex items-center justify-center relative
+}
+.authSecond_conatiner{
+  @apply p-4 h-[92%] md:h-[calc(100vh-5rem)]  flex items-center justify-center
+}
+.authMain_container{
+  @apply h-full shadow-2xl rounded-md flex flex-col md:flex-row md:h-[70%] md:w-[95%] lg:w-[85%]
+}
+.authImg_container{
+  @apply relative md:h-full md:w-1/2 hidden md:block
+}
+.authForm_container{
+  @apply px-10 py-4 md:py-7 flex flex-col gap-8 md:w-1/2
+}

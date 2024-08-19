@@ -1,20 +1,15 @@
 import React, { useContext, useState } from 'react'
-import EmailInput from '../form/inputField'
+import EmailInput from '../auth/inputField'
 import { styles } from '../../style'
 import { close } from "../../assets/index"
 import { ModalContext } from '../functions/ModalPopup'
-import SignUp from '../functions/userAuth'
-import { useNavigate } from 'react-router-dom'
-import { useUserContext } from '../state/UserState'
+import { Link } from 'react-router-dom'
 
-export default function Promotion() {
-    const navigate = useNavigate()
-    const handleEmail = SignUp();
-    const { signUpClose } = useContext(ModalContext)
-    const { userProfile, setUserProfile } = useUserContext();
+export default function Promotion({closePromotion}) {
+   
 
 
-    
+
 
     return (
         <div className=' bg-Dim md-w-full h-screen flex items-center justify-center'>
@@ -24,32 +19,29 @@ export default function Promotion() {
                     <img src="https://res.cloudinary.com/dyknfomwp/image/upload/v1717592761/e-commerce-app/f3_spcawv.jpg" className='h-full' />
                 </div>
 
-                <div className='px-12 py-16 mb-8 md:mb-auto md:w-[50%]'>
-                    <div className='absolute top-3.5 right-3.5 w-[1rem]' autoFocus onClick={signUpClose}>
+                <div className='px-12 py-16 md:w-[50%] flex items-center justify-center'>
+                    <div className='absolute top-3.5 right-3.5 w-[1rem]' autoFocus onClick={closePromotion}>
                         <img src={close} />
                     </div>
 
                     <div className={`flex flex-col gap-4 items-center ${styles.blackText}`}>
 
                         <div className={`${styles.blackText} text-center flex flex-col items-center justify-center gap-4`}>
-                            <h4 className={`text-300`}>Enter your email to unlock</h4>
                             <h2 className={`text-800 `}>15% off your first order</h2>
-                            <p className={`text-300`}>
-                                Plus, get insider access to <br className='block md:hidden' />
-                                promotions, <br className='block md:hidden' />
+                            <p className={`text-400 px-4`}>
+                                Plus, get insider access to 
+                                promotions, 
                                 launches, events, and more.
                             </p>
                         </div>
 
-                        <form onSubmit={handleEmail} className='flex flex-col gap-4 w-fit'>
-                            <EmailInput/>
+                        <Link to='/auth/signUp' >
                             <button
-                                type='submit'
                                 className={`${styles.smallButton} mx-auto`}
-                                onClick={() => navigate('/SignUp')}>
+                                onClick={closePromotion}>
                                 Unlock Access
                             </button>
-                        </form>
+                        </Link>
                     </div>
                 </div>
             </div>
